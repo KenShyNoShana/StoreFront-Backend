@@ -1,15 +1,16 @@
-import express, { Request, Response } from 'express'
-import bodyParser from 'body-parser'
+import express from 'express';
+import bodyParser from 'body-parser';
+import userRouter from './routes/user';
+import productsRouter from './routes/products';
+import ordersRouter from './routes/orders';
 
-const app: express.Application = express()
-const address: string = "0.0.0.0:3000"
+export const app: express.Application = express();
+export const address: string = "0.0.0.0:3000";
 
-app.use(bodyParser.json())
+app.use(express.json());
 
-app.get('/', function (req: Request, res: Response) {
-    res.send('Hello World!')
-})
+app.use(bodyParser.json());
 
-app.listen(3000, function () {
-    console.log(`starting app on: ${address}`)
-})
+ordersRouter(app);
+productsRouter(app);
+userRouter(app);
