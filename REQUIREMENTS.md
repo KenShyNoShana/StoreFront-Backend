@@ -7,11 +7,11 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 #### Users
 
-Index [GET] `/` => token required
-Show [GET] `/:id` => token required
-Create [POST] `/` => SIGN UP
-Authenticate [POST] `/auth` => SIGN IN
-Delete [DELETE] `/:id` => token required
+- Index [GET] `/` => token required
+- Show [GET] `/:id` => token required
+- Create [POST] `/` => SIGN UP
+- Authenticate [POST] `/auth` => SIGN IN
+- Delete [DELETE] `/:id` => token required
 
 #### Products
 
@@ -22,18 +22,18 @@ Delete [DELETE] `/:id` => token required
 
 #### Orders
 
-Index [GET] `/orders`
-Get all order products [GET] `/orders/article`
-Show [GET] `/orders/:id`
-Show Order products [GET] `/orders/article/:id`
-Show Order by User Id [GET] `/orders/user/:id` => token required
-Show active by User Id [GET] `/orders/active/:id` => token required
-Show complete by User Id [GET] `/orders/complete/:id` => token required
-Create [POST] `/orders` => token required
-Add Product to Order [POST] `/orders/article` => token required
-Delete [DELETE] `orders/:id` => token required
-Delete Order Product by Id [DELETE] `/orders/article/:id/:prod_id` => token required
-Delete All Order Products [DELETE] `/orders/article/:id` => token required
+- Index [GET] `/orders`
+- Get all order products [GET] `/orders/article`
+- Show [GET] `/orders/:id`
+- Show Order products [GET] `/orders/article/:id`
+- Show Order by User Id [GET] `/orders/user/:id` => token required
+- Show active by User Id [GET] `/orders/active/:id` => token required
+- Show complete by User Id [GET] `/orders/complete/:id` => token required
+- Create [POST] `/orders` => token required
+- Add Product to Order [POST] `/orders/article` => token required
+- Delete [DELETE] `orders/:id` => token required
+- Delete Order Product by Id [DELETE] `/orders/article/:id/:prod_id` => token required
+- Delete All Order Products [DELETE] `/orders/article/:id` => token required
 
 ## Data Shapes
 
