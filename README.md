@@ -2,8 +2,9 @@
 
 ## Getting Started
 
-1. Install all dependencies with `npm install`
-2. Create the Databases and User in psql:
+1. Create the .env file and set [Enviroment variables](#enviroment-variables)
+2. Install all dependencies with `npm install`
+3. Create the Databases and User in psql:
 ```
 CREATE USER storefront_backend_user WITH PASSWORD '123qwe';
 CREATE DATABASE storefront;
@@ -11,9 +12,9 @@ GRANT ALL PRIVILEGES ON DATABASE storefront TO storefront_backend_user;
 CREATE DATABASE storefront_testdb;
 GRANT ALL PRIVILEGES ON DATABASE storefront_testdb TO storefront_backend_user;
 ```
-3. populate the Database with `npm run db-up`
-4. Transpile Typescript and start the server on port 3000 with `npm run watch`
-5. Run all tests with `npm run test`
+4. populate the Database with `npm run db-up`
+5. Transpile Typescript and start the server on port 3000 with `npm run watch`
+6. Run all tests with `npm run test`
 
 ## Data Shapes
 
