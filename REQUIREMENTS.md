@@ -22,10 +22,10 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 #### Orders
 
-- Index [GET] `/orders`
-- Get all order products [GET] `/orders/article`
-- Show [GET] `/orders/:id`
-- Show Order products [GET] `/orders/article/:id`
+- Index [GET] `/orders` => token required
+- Get all order products [GET] `/orders/article` => token required
+- Show [GET] `/orders/:id` => token required
+- Show Order products [GET] `/orders/article/:id` => token required
 - Show Order by User Id [GET] `/orders/user/:id` => token required
 - Show active by User Id [GET] `/orders/active/:id` => token required
 - Show complete by User Id [GET] `/orders/complete/:id` => token required
