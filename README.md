@@ -12,9 +12,9 @@ GRANT ALL PRIVILEGES ON DATABASE storefront TO storefront_backend_user;
 CREATE DATABASE storefront_testdb;
 GRANT ALL PRIVILEGES ON DATABASE storefront_testdb TO storefront_backend_user;
 ```
-4. populate the Database with `npm run db-up`
-5. Transpile Typescript and start the server on port 3000 with `npm run watch`
-6. Run all tests with `npm run test`
+4. populate the Database with `npm run db-up` (Windows) or `npm run db-upL` (Linux and Mac)
+5. Transpile Typescript and start the server on port 3000 with `npm run watch` (Windows) or `npm run watchL` (Linux and Mac)
+6. Run all tests with `npm run test` (Windows) or `npm run testL` (Linux and Mac)
 
 ## Data Shapes
 
