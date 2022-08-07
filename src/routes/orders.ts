@@ -194,10 +194,10 @@ async function getCompleteOrderByUserId(req: Request, res: Response): Promise<Re
 
 function ordersRouter(app: express.Application)
 {
-    app.get("/orders", index);
-    app.get("/orders/article", getAllOrderProducts);
-    app.get("/orders/:id", show);
-    app.get("/orders/article/:id", getOrderProducts);
+    app.get("/orders", verifyAuthToken, index);
+    app.get("/orders/article", verifyAuthToken, getAllOrderProducts);
+    app.get("/orders/:id", verifyAuthToken, show);
+    app.get("/orders/article/:id", verifyAuthToken, getOrderProducts);
     app.get("/orders/user/:id", verifyAuthToken, getOrderByUserId);
     app.post("/orders", verifyAuthToken, create);
     app.post("/orders/article", verifyAuthToken, addProductToOrder);
