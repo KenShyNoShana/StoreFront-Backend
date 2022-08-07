@@ -13,6 +13,7 @@ CREATE DATABASE storefront_testdb;
 GRANT ALL PRIVILEGES ON DATABASE storefront_testdb TO storefront_backend_user;
 ```
 4. populate the Database with `npm run db-up` (Windows) or `npm run db-upL` (Linux and Mac)
+    - Database runs on port 5432
 5. Transpile Typescript and start the server on port 3000 with `npm run watch` (Windows) or `npm run watchL` (Linux and Mac)
 6. Run all tests with `npm run test` (Windows) or `npm run testL` (Linux and Mac)
 
@@ -64,10 +65,10 @@ GRANT ALL PRIVILEGES ON DATABASE storefront_testdb TO storefront_backend_user;
 
 #### Orders
 
-- Index [GET] `/orders`
-- Get all order products [GET] `/orders/article`
-- Show [GET] `/orders/:id`
-- Show Order products [GET] `/orders/article/:id`
+- Index [GET] `/orders` => token required
+- Get all order products [GET] `/orders/article` => token required
+- Show [GET] `/orders/:id` => token required
+- Show Order products [GET] `/orders/article/:id` => token required
 - Show Order by User Id [GET] `/orders/user/:id` => token required
 - Show active by User Id [GET] `/orders/active/:id` => token required
 - Show complete by User Id [GET] `/orders/complete/:id` => token required
