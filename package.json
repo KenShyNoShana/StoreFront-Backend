@@ -6,12 +6,17 @@
   "main": "server.ts",
   "scripts": {
     "start": "cross-env ENV=dist nodemon ./src/app.ts",
+    "startL": "ENV=dist nodemon ./src/app.ts",
     "watch": "cross-env ENV=dist tsc-watch --esModuleInterop src/app.ts --outDir ./dist --onSuccess \"node ./dist/app.js\"",
+    "watchL": "ENV=dist tsc-watch --esModuleInterop src/app.ts --outDir ./dist --onSuccess \"node ./dist/app.js\"",
     "test": "cross-env ENV=test npm run testSetup",
+    "testL": "ENV=test npm run testSetup",
     "testSetup": "db-migrate --env test down -c5 && db-migrate --env test up && npm run jestSetup",
     "jestSetup": "jest -- orders.test.ts && jest -- users.test.ts && jest -- products.test.ts",
     "db-up": "cross-env ENV=dev db-migrate up --config ./database.json",
+    "db-upL": "ENV=dev db-migrate up --config ./database.json",
     "db-down": "cross-env ENV=dev db-migrate down -c5 --config ./database.json",
+    "db-downL": "ENV=dev db-migrate down -c5 --config ./database.json",
     "tsc": "tsc"
   },
   "author": "Udacity",
